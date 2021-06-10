@@ -19,7 +19,7 @@ with requests.Session() as req:
                 res = req.get(url, verify=False, stream=True, timeout=1.5)
                 #time.sleep(9)
                 #print(res.text)
-                if 'xsst<>' in res.text:
+                if 'xsst"><>' in res.text:
                         print("\033[1;31;40m [xss found]\033[1;36;40m : \033[1;37;40m", url, "\033[1;36;40m : \033[1;37;40m {}/{}".format(counter,line_count))
 
                         file1 = open('xss', 'a')
